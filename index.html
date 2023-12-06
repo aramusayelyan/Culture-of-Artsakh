@@ -3,35 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="4.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
-    <script>
-        function performTranslation() {
-            var armenianInput = document.getElementById("armenianInput").value.toLowerCase();
-            var artsakhInput = document.getElementById("artsakhInput");
-    
-            // JavaScript code for transliteration
-            var armenianToLatin = {
-                'բարի': 'պար', 'ոնցես': 'հունցս', 'լույս': 'լուս',
-                // Add more Armenian characters and their Latin equivalents as needed
-            };
-    
-            var result = '';
-            armenianInput.split(' ').forEach(function(word) {
-                result += armenianToLatin[word] || word;
-                result += ' ';
-            });
-    
-            artsakhInput.value = result.trim();
-        }
-    </script>
+
     
 </head>
 <body>
     <header>
         <nav class="navbar">
-          <a href="index.html" class="nav-branding"><img class="nav-branding" src="img/logo.png" alt="logo"></a>
+          <a href="index.html" class="nav-branding"><img class="nav-branding" src="#" alt="logo"></a>
           <ul class="nav-menu">
             <li class="nav-item">
               <strong><a class="nav-link" aria-current="page" href="ֆիզիկ.html">Գլխավոր</a></strong>
@@ -54,7 +38,7 @@
       <div class="bac">
       <div class="image_center"></div>
     
-
+<div class="contener"></div>
     <div class="translet">
         <div>
             <h3 class="transl">Հայերեն</h3>
@@ -65,8 +49,8 @@
             <h3 class="transl">Արցախյան բարբառ</h3>
             <textarea id="artsakhInput" class="mob_textarea" style="background-color: #f5f5f5;" placeholder="Արցախյան բարբառով..." readonly></textarea>
         </div>
-        <button type="submit" onclick="performTranslation()">Տեսնել Արդյունքը</button>
-    </div>
+        <button  class="but" type="submit" onclick="performTranslation()">Տեսնել Արդյունքը</button>
+    </div></div>
 
 </div>
 </body>

@@ -112,14 +112,29 @@ a {
     display: flex;
     flex-wrap: wrap;
 }
+.but {
+    margin-bottom: 10px;
+    display: block;
+    background-color: #ED8224;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 12px;
+    font-size: 32px;
+    cursor: pointer;
+    margin-right: 0px;
+    margin-left: auto;
+    width: 485px; 
+    height: 75px; 
+}
 
 .mob_textarea {
-    width: 650px;
+    width: 671px;
     margin-right: 35px;
     height: 240px;
     margin-bottom: 10px;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 12px;
     border: 1px solid #ccc;
     font-size: 21px;
 
@@ -135,8 +150,7 @@ button[type="submit"] {
     color: white;
     padding: 10px;
     border: none;
-    border-radius: 5px;
-    font-size: 16px;
+    border-radius: 12px;
     cursor: pointer;
 }
 
@@ -190,12 +204,28 @@ button[type="submit"] {
     .mob_textarea {
         margin-bottom: 10px;
         padding: 10px;
-        border-radius: 5px;
+        border-radius: 12px;
         border: 1px solid #ccc;
         font-size: 21px;
         width: 376px;
         height: 51px;
+        margin-left: auto;
+        margin-right: auto;
     }
-    
+    .but {
+        margin-bottom: 10px;
+        display: block;
+        background-color: #ED8224;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 12px;
+        font-size: 20px;
+        cursor: pointer;
+        margin-right: 0px;
+        margin-left: auto;
+        width: 376px; 
+        height: 51px; 
+    }
 
 }
