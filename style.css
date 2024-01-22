@@ -1,231 +1,256 @@
+@font-face {
+    font-family: "Montserrat arm";
+    src: url(./assets/fonts/Montserratarm-Regular.otf);
+}
 * {
-    padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    padding: 0;
+    max-width: 100%;
+    font-family: "Montserrat arm";
+}
+/* Add this CSS for the modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
-body {
-    color: #333;
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
 }
 
-.navbar .nav-menu .dropdown:hover .dropdown-menu {
-    display: block;
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
 }
 
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    background-color: #fff;
-    /* Background color for the dropdown */
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-.dropdown-menu a {
-    color: #333;
-    /* Text color for dropdown items */
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-menu a:hover {
-    background-color: #f5f5f5;
-    /* Background color on hover */
-}
-
+/* HEADER */
 header {
-    background-color: #FFAC0A;
+    height: 72px;
+    display: flex;
+    padding: 16px 40px;
+    background-color: #FFFFFF;
+    justify-content: space-between;
 }
-
-li {
-    list-style: none;
+.logo {
+    width: 80px;
 }
-
-a {
-    color: #333333;
+nav {
+    gap: 35px;
+    display: flex;
+    padding: 25px 0;
+}
+header a {
+    float: right;
+    color: #000;
     text-decoration: none;
 }
 
-.navbar {
-    min-height: 70px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 24px;
+header a:hover {
+    font-weight: bold;
+}
+/* MAIN */
+main {
+    width: 100%;
 }
 
-.nav-menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 60px;
-}
-
-.nav-link {
-    transform: 0.7s;
-}
-
-.nav-link:hover {
-    color: #1F87E7
-}
-
-.hamburger {
-    display: none;
-    cursor: pointer;
-}
-
-.nav-branding {
-    width: 60px;
-    height: 60px;
-}
-
-.bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    background-color: black;
-}
-
-.image_center {
-    text-align: center;
-    height: 349px;
+.main_bg {
+    width: 100%;
+    height: 330px;
     background-size: cover;
-    background-position-y: bottom;
-    padding: 4px 0;
-    background-image: url(bg.png);
-
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('./assets/img/bg.png'); 
 }
-
-.transl {
-    margin-bottom: 24px;
-    font-size: 32px;
+.all {
+    padding: 0 40px;
 }
-
-.translet {
-    margin-top: 48px;
-    margin-left: 40px;
-    margin-right: 40px;
+/* SEC_ONE */
+.sec_one {
+    width: 100%;
+    margin: 40px 0px;
+    border-radius: 7px;
+    margin-bottom: 35px;
+    background-color: #fff;
+}
+.sec_wrapper_one {
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
+    border: solid 1px #b7b6b6;
+    justify-content: space-evenly;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
 }
-.but {
-    margin-bottom: 10px;
-    display: block;
-    background-color: #ED8224;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 12px;
-    font-size: 32px;
-    cursor: pointer;
-    margin-right: 0px;
-    margin-left: auto;
-    width: 485px; 
-    height: 75px; 
+.lang {
+    padding: 10px 0;
+    font-weight:bold;
 }
-
-.mob_textarea {
-    width: 671px;
-    margin-right: 35px;
-    height: 240px;
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 12px;
+.wrapper {
     border: 1px solid #ccc;
-    font-size: 21px;
-
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
-
-.bac {
+.wrapper .text-input {
+    display: flex;
+}
+.text-input .to-text {
+    background-color: #F5F5F5;
+    border-left: 1px solid #ccc;
+    border-bottom-right-radius: 13px;
+}
+.text-input textarea {
+    width: 100%;
+    border: none;
+    resize: none;
+    min-height: 170px;
+    font-size: 18px;
+    padding: 10px 15px;
+}
+.text-input textarea::placeholder {
+    color: #b7b6b6;
+}
+hr {
+    margin: 40px 0;
+}
+/* SEC_TWO */
+.sec_two_title {
+    font-size: 50px;
+    font-weight: 700;
+    text-align: center;
+}
+.sec_two_blocks {
+    display: flex;
+    justify-content: space-evenly;
+}
+.text {
+    font-size: 29px;
+    color: #000000;
+    padding: 90px 0px;
+    line-height: 35px;
+}
+/* SEC_THREE */
+.sec_three {
+    display: flex;
+    justify-content: space-between;
+}
+.text_three_text {
+    width: 71%;
+    padding: 11% 0px;
+    /* pading */
+}
+/* SEC_FOUR */
+.sec_four {
+    display: flex;
+    justify-content: space-between;
+}
+/* FOOTER */
+footer {
+    width: 100%;
+    margin-top: 15%;
     background-color: #FFAC0A;
 }
-
-button[type="submit"] {
-    display: block;
-    background-color: #ED8224;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 12px;
-    cursor: pointer;
+.footer_container {
+    padding: 80px 0;
+} 
+.footer_text {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 70px;
 }
-
-
-
-@media(max-width:760px) {
-    .hamburger {
-        display: block;
-    }
-
-    .hamburger.active.bar:nth-child(2) {
-        opacity: 0;
-    }
-
-    .hamburger.active.bar:nth-child(1) {
-        transform: translateY(-8px) rotate(-45deg);
-    }
-
-    .nav-menu {
-        position: fixed;
-        left: -100%;
-        top: 70px;
-        gap: 0;
-        flex-direction: column;
-        background-color: white;
-        width: 100%;
-        text-align: center;
-        transition: 0.3s;
-    }
-
-    .nav-item {
-        margin: 16px 0;
-    }
-
-    .nav-menu.active {
-        left: 0;
-    }
-
-   
-
-    .translet {
-        margin-left: 40px;
-        margin-right: 40px;
-        display: flex;
-        flex-wrap: wrap;
-        margin-top: 48px;
-        justify-content: center;  /* Center horizontally */
-        align-items: center;      /* Center vertically */
-    }
-    
-    .mob_textarea {
-        margin-bottom: 10px;
-        padding: 10px;
-        border-radius: 12px;
-        border: 1px solid #ccc;
-        font-size: 21px;
-        width: 376px;
-        height: 51px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .but {
-        margin-bottom: 10px;
-        display: block;
-        background-color: #ED8224;
-        color: white;
-        padding: 10px;
-        border: none;
-        border-radius: 12px;
-        font-size: 20px;
-        cursor: pointer;
-        margin-right: 0px;
-        margin-left: auto;
-        width: 376px; 
-        height: 51px; 
-    }
-
+.feedback {
+    display: flex;
+    justify-content: space-evenly;
 }
+.name {
+    color: #fff;
+    padding: 18px;
+    font-size: 24px;
+    font-weight: 500;
+}
+/* Add this at the end of your CSS */
+
+/* Responsive Styles for Phones */
+@media only screen and (max-width: 600px) {
+    header {
+      padding: 10px;
+      height: auto;
+    }
+  
+    nav {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .main_bg {
+      height: 200px;
+    }
+  
+    .all {
+      padding: 0 10px;
+    }
+  
+    .sec_one,
+    .sec_two,
+    .sec_three,
+    .sec_four {
+      margin: 20px 0;
+    }
+  
+    .sec_two_title {
+      font-size: 36px;
+    }
+  
+    .text {
+      font-size: 18px;
+      padding: 40px 0;
+    }
+  
+    .sec_three_text {
+      width: 100%;
+      padding: 10% 0;
+    }
+  
+    footer {
+      margin-top: 10%;
+    }
+  
+    .footer_container {
+      padding: 40px 10px;
+    }
+  
+    .footer_text {
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+  
+    .feedback {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .name {
+      padding: 10px;
+    }
+  }
+  
