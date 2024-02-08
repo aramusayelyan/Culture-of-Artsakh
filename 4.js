@@ -49,11 +49,11 @@ function performTranslation() {
   
 
 
-  var result = '';
-  armenianInput.split(' ').forEach(function (word) {
-      result += armenianToLatin[word] || word;
-      result += ' ';
-  });
+ var result = '';
+    armenianInput.split(' ').forEach(function (word) {
+        result += armenianToLatin[word] || word;
+        result += ' ';
+    });
 
-  artsakhInput.value = result.trim();
+    artsakhInput.value = result.trim();
 }
