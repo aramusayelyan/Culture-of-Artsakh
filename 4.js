@@ -443,6 +443,7 @@ function performTranslation() {
   
 
 
+   
     var result = '';
     var words = armenianInput.split(' ');
 
@@ -456,9 +457,9 @@ function performTranslation() {
             result += 'ք'; // Append "ք"
         } else {
             result += armenianToLatin[word] || word;
-            if (i < words.length - 1) {
-                result += ' '; // Add space if it's not the last word
-            }
+        }
+        if (i < words.length - 1) {
+            result += ' '; // Add space if it's not the last word
         }
     }
 
