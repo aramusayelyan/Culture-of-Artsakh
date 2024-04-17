@@ -442,7 +442,8 @@ function performTranslation() {
   };
   
 
- var result = '';
+
+    var result = '';
     var words = armenianInput.split(' ');
 
     for (var i = 0; i < words.length; i++) {
@@ -455,10 +456,11 @@ function performTranslation() {
             result += 'ք'; // Append "ք"
         } else {
             result += armenianToLatin[word] || word;
+            if (i < words.length - 1) {
+                result += ' '; // Add space if it's not the last word
+            }
         }
-        result += ' ';
     }
 
     artsakhInput.value = result.trim();
 }
-
